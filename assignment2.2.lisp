@@ -1,0 +1,11 @@
+(defun simplifyfraction (F)
+  (cond ((= (cdr F) 0) 'ZeroDivide-Error)
+	((= (cdr F) 1) (car F))
+	((= (car F) 0) 0)
+	((= (euclid (car F) (cdr F)) 1)
+	 (cons (car F) (cdr F)))
+	(t (simplifyfraction
+	    (cons (/ (car F) (euclid (car F) (cdr F)))
+		  (/ (cdr F) (euclid (car F) (cdr F))))))
+	)
+  )
