@@ -28,8 +28,7 @@
   (cond ((eql (cadr L) '*) (* (car L) (caddr L)))
 	((eql (cadr L) '+) (+ (car L) (caddr L)))
 	((eql (cadr L) '-) (- (car L) (caddr L)))
-	((eql (cadr L) '/) (cons (car L) (caddr L)))
-	;((eql (cadr L) '/) (/ (car L) (caddr L)))
+	((eql (cadr L) '/) (/ (car L) (caddr L)))
 	))
 	
 
