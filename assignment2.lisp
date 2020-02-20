@@ -110,7 +110,7 @@
 	
 	((and (isNested (car E)) (isNested (cddr E)))
 	 (binarize_after_nest (append
-			       (explore_nesting (car E))
+			       (cons (explore_nesting (car E)) '())
 			       (cons (cadr E) '())
 			       (explore_nesting (cddr E)))))
 	
